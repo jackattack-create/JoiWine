@@ -17,6 +17,16 @@
 
 .newsletter-form__field-wrapper {
   width: 100%;
+  display: flex; 
+  flex-direction:row;
+  justify-content: space-evenly; 
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 750px) {
+  .newsletter-form__field-wrapper {
+    flex-direction: column;
+  }
 }
 
 .newsletter-form__field-wrapper .field__input {
