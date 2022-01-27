@@ -7,6 +7,10 @@
 
 .hero-icon-box {
     width: 24%;
+    text-align:center;
+}
 
+.hero-icon-box p {
+    width:80%;
 }
 
