@@ -29,7 +29,7 @@
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
-              <div class="newsletter-form__field-wrapper">
+              <div class="newsletter-form__field-wrapper" style="display: flex; justify-content: space-evenly;">
                 <div class="field">
                   <input class="field__input" autocomplete="name" type="text" id="ContactForm-first_name" name="contact[first_name]" value="" aria-required="true" placeholder="First Name" required>
                   <label class="field__label" for="ContactForm-first_name">{{ 'customer.register.first_name' | t }}</label>
@@ -60,18 +60,19 @@
                   </label>
                 </div>
                 
-                  <div class="contact__button">
-                    <button type="submit" class="button" style="background-color:#C8B1E5;">
-                      {{ 'templates.contact.form.send' | t }}
-                    </button>
                 {%- if form.errors -%}
-                  <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
                 {%- endif -%}
               </div>
               {%- if form.posted_successfully? -%}
-                <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+              <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="Newsletter-success--{{ section.id }}" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
               {%- endif -%}
-            {% endform %}
+              <div class="contact__button">
+                <button type="submit" class="button" style="background-color:#C8B1E5;">
+                  {{ 'templates.contact.form.send' | t }}
+                </button>
+              </div>
+              {% endform %}
           </div>
       {%- endcase -%}
     {%- endfor -%}
