@@ -164,7 +164,7 @@
 
 .image-with-text--overlap .image-with-text__content {
   transform: translate(0 , -3rem);
-  width: 90%;
+  /* width: 90%; */
   margin: 0 auto;
 }
 
