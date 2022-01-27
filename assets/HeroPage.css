@@ -1,12 +1,12 @@
 .icons-box {
     width:100%;
     display:flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
 .hero-icon-box {
-    width: 20%;
+    width: 24%;
 
 }
 
