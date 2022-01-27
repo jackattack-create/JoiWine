@@ -3,6 +3,7 @@
     display:flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .hero-icon-box {
@@ -13,5 +14,14 @@
 .hero-icon-box p {
     width:90%;
     font-size:1rem;
+}
+
+@media screen and (max-width:750px) {
+    .icons-box {
+        flex-wrap:wrap;
+    }
+    .hero-icon-box {
+        width: 45%;
+    }
 }
 
