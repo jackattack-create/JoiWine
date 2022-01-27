@@ -25,5 +25,10 @@
         width: 45%;
         margin-bottom: 10px;
     }
+
+    .hero-icon-box p {
+        width:100%;
+        font-size:1.2rem;
+    }
 }
 
