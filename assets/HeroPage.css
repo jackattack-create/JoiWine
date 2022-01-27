@@ -19,9 +19,11 @@
 @media screen and (max-width:750px) {
     .icons-box {
         flex-wrap:wrap;
+
     }
     .hero-icon-box {
         width: 45%;
+        margin-bottom: 10px;
     }
 }
 
